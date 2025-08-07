@@ -12,6 +12,8 @@ COPY src/ /var/www/html/
 
 WORKDIR /var/www/html
 
+RUN composer install
+
 RUN a2enmod rewrite
 
 EXPOSE 80
