@@ -12,6 +12,8 @@ if(! isset($_POST['destinatario'])){
 
 // Obtém o host da variável de ambiente, ou 'localhost' como default
 $rabbitmqHost = getenv('RABBITMQ_HOST') ?: 'localhost'; 
+$rabbitmqUser = getenv('RABBITMQ_USER') ?: 'guest'; 
+$rabbitmqPass = getenv('RABBITMQ_PASS') ?: 'guest'; 
 
 // Conexão com o RabbitMQ
 $connection = new AMQPStreamConnection($rabbitmqHost, 5672, 'guest', 'guest');
